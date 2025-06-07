@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throne and Liberty Companion App</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #12141F;
+            color: #e0e0e0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #1f1f1f;
+            border-bottom: 1px solid #333;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            color: #F5DEB3; /* Gold color for a premium feel */
+        }
+        .header p {
+            font-size: 1.2em;
+            color: #aaa;
+        }
+        .section {
+            padding: 40px 20px;
+            border-bottom: 1px solid #333;
+        }
+        .section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.2em;
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        .benefit {
+            background: #1f1f1f;
+            padding: 25px;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .benefit:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+        .benefit h3 {
+            color: #F5DEB3;
+            margin-top: 0;
+            font-size: 1.4em;
+        }
+        .privacy-section {
+            background-color: #1a1812;
+            border: 1px solid #5a4d2c;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .privacy-section h3 {
+            color: #F5DEB3;
+            margin-top: 0;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+        }
+        .privacy-section p {
+            max-width: 650px;
+            margin: 0 auto 15px auto;
+            color: #ccc;
+        }
+        .privacy-section a {
+            color: #F5DEB3;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .privacy-section a:hover {
+            text-decoration: underline;
+        }
+        .accordion-item {
+            background-color: #1f1f1f;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .accordion-button {
+            background-color: #2a2a2a;
+            color: #e0e0e0;
+            cursor: pointer;
+            padding: 18px 20px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+        .accordion-button:hover {
+            background-color: #333;
+        }
+        .accordion-content {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+        }
+        .accordion-content p {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        .accordion-content ul {
+            padding-left: 20px;
+        }
+        .accordion-content li {
+            margin-bottom: 10px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Throne and Liberty Companion</h1>
+        <p>Your ultimate companion for mastering the world of TL.</p>
+    </div>
+
+    <div class="container">
+
+        <div class="section privacy-section">
+            <h3>Account Deletion Instructions</h3>
+            <p>You have the right to request the deletion of your account. Please send an email to <a href="mailto:tl.companion.app@gmail.com">tl.companion.app@gmail.com</a> from the email address associated with your account, using the subject line "Account Deletion Request".</p>
+            <p>This will permanently remove your profile, saved builds, and personal data. Full details are available in our <a href="https://snuffules.github.io/tl-companion-privacy/" target="_blank" rel="noopener noreferrer">Data Deletion Policy</a>.</p>
+        </div>
+
+        <div class="section">
+            <h2>Why Use the Companion App?</h2>
+            <div class="benefits-grid">
+                <div class="benefit">
+                    <h3>Plan Your Perfect Build</h3>
+                    <p>Experiment with weapons, armor, and skills to create the ultimate character build before committing in-game.</p>
+                </div>
+                <div class="benefit">
+                    <h3>Maximize Your Power</h3>
+                    <p>Use the integrated CP (Combat Power) calculator to see the direct impact of every choice on your character's strength.</p>
+                </div>
+                <div class="benefit">
+                    <h3>Stay Ahead of the Meta</h3>
+                    <p>Save, share, and compare builds with the community. Discover new strategies and adapt to every challenge.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>App Features & Systems Explained</h2>
+            
+            <div class="accordion-item">
+                <button class="accordion-button">Character Build System</button>
+                <div class="accordion-content">
+                    <p>The core of the app is the Character Builder. This system lets you theorycraft and design your character from the ground up, providing a powerful visual interface to manage every aspect of your build.</p>
+                    <ul>
+                        <li><strong>Weapons & Armor:</strong> Equip any combination of main and off-hand weapons. Fill all your armor slots with gear of varying rarities and stats.</li>
+                        <li><strong>Traits & Runes:</strong> Fine-tune your gear by selecting specific traits and socketing powerful runes to unlock hidden potential.</li>
+                        <li><strong>Saved Builds:</strong> All your creations are saved to your account, allowing you to access and tweak them anytime, anywhere.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-button">Skills & Abilities Management</button>
+                <div class="accordion-content">
+                    <p>A great build is more than just gear. Our app lets you select and manage your active and passive skills to match your playstyle.</p>
+                    <ul>
+                        <li><strong>Skill Selection:</strong> Choose from a complete list of available skills for your chosen weapons.</li>
+                        <li><strong>Synergy Planning:</strong> Visualize how your skills, gear bonuses, and traits will work together in combat.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-button">Combat Power (CP) Calculator</button>
+                <div class="accordion-content">
+                    <p>Instantly see the impact of your choices. Our precise CP Calculator updates in real-time as you adjust your build, removing the guesswork from character progression.</p>
+                    <ul>
+                        <li><strong>Real-Time Calculation:</strong> The total CP is automatically calculated based on your equipped items, selected traits, skill levels, runes, and more.</li>
+                        <li><strong>Detailed Breakdown:</strong> Understand exactly where your power comes from. The calculator shows how much CP is contributed by each category—weapons, armor, skills, etc.</li>
+                        <li><strong>Informed Decisions:</strong> Compare different items or trait choices side-by-side to determine which upgrade gives you the most significant power boost.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-button">Data & Account Management</button>
+                <div class="accordion-content">
+                    <p>Your data is secure, private, and always accessible. We use modern, secure backend services to manage your account and builds.</p>
+                    <ul>
+                        <li><strong>Secure Authentication:</strong> Sign in safely with Google or a traditional email/password login. Your account information is protected.</li>
+                        <li><strong>Cloud Storage:</strong> Your builds are stored in the cloud with Firebase Firestore, ensuring they are automatically backed up and synced across devices.</li>
+                        <li><strong>Privacy Control:</strong> Choose to keep your builds private for personal use or make them public to share with the community.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Throne and Liberty Companion is a fan-made app and is not affiliated with NCSOFT.</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const buttons = document.querySelectorAll('.accordion-button');
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const content = button.nextElementSibling;
+                    button.parentElement.classList.toggle('active');
+
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                        content.style.padding = '0 20px';
+                    } else {
+                        // Set a timeout to allow the transition to register the padding change
+                        setTimeout(() => {
+                            content.style.padding = '1px 20px'; // Use 1px to ensure top/bottom margins are contained
+                        }, 10);
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    } 
+                });
+            });
+        });
+    </script>
+
+</body>
+</html> 
